@@ -16,7 +16,6 @@ public class ListViewTimerPageModel
         timer.Interval = TimeSpan.FromSeconds(0.5);
         timer.Tick += (sender, args) =>
         {
-            Debug.WriteLine("tick");
             EventItems.Add(EventItem.GenerateEventWithRandomMessage());
         };
     }
