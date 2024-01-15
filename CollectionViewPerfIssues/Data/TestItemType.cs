@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CollectionViewPerfIssues;
+namespace CollectionViewPerfIssues.Data;
 
 public enum TestItemType
 {
@@ -15,11 +15,9 @@ public enum TestItemType
     ListViewTimer,
 }
 
-public class TestItem
-{
-	public TestItem()
-	{
 
-	}
-}
+
+
+
+
 

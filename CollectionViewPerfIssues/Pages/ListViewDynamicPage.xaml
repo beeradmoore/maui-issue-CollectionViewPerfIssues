@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewPerfIssues.Pages.ListViewDynamicPage"
+             xmlns:data="clr-namespace:CollectionViewPerfIssues.Data"
+             xmlns:pages="clr-namespace:CollectionViewPerfIssues.Pages"
+             x:DataType="pages:ListViewDynamicPageModel">
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*,*,*">
+        <Button Grid.Row="0" Grid.Column="0" Text="Add 1" Command="{Binding AddEventsCommand}" CommandParameter="1" VerticalOptions="Center" HorizontalOptions="Center" Margin="8" />
+        <Button Grid.Row="0" Grid.Column="1" Text="Add 10" Command="{Binding AddEventsCommand}" CommandParameter="10" VerticalOptions="Center" HorizontalOptions="Center" Margin="8"  />
+        <Button Grid.Row="0" Grid.Column="2" Text="Add 50" Command="{Binding AddEventsCommand}" CommandParameter="50" VerticalOptions="Center" HorizontalOptions="Center" Margin="8"  />
+        <Button Grid.Row="0" Grid.Column="3" Text="Add 100" Command="{Binding AddEventsCommand}" CommandParameter="100" VerticalOptions="Center" HorizontalOptions="Center" Margin="8"  />
+    
+        <ListView Grid.Row="1" Grid.ColumnSpan="4" ItemsSource="{Binding EventItems}" RowHeight="40" HasUnevenRows="False" SelectionMode="None">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="data:EventItem">
+                    <ViewCell>
+                        <Grid ColumnDefinitions="100,100,*" HeightRequest="40">
+                            <Label Grid.Column="0" Text="{Binding LogLevel}" VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1" Text="{Binding EventTimeString}" VerticalTextAlignment="Center" />
+                            <Label Grid.Column="2" Text="{Binding Message}" VerticalTextAlignment="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

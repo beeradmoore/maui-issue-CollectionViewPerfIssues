@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CollectionViewPerfIssues.Data;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace CollectionViewPerfIssues;
