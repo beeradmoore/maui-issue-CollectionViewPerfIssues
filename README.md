@@ -12,6 +12,7 @@ Any and all performance suggestions are more than welcome as an issue or as a pu
 - Each row displayed in the List/CollectionViews has its height set to 40 to try avoid row height measurement performance.
 - Each row displayed in the List/CollectionViews is a Grid with 3 columns which are sized 100,100,*.
 - Each `EventItem` which is the row only displays 3 strings. Originally I was using a string formatter to convert DateTime to a string in the xaml but as a performance constraint I do that in the constructor.
+- ListViews use `CachingStrategy="RecycleElement"`
 
 # The tests
 - Static tests - List/CollectionViews with 50, 100, and 250 items.

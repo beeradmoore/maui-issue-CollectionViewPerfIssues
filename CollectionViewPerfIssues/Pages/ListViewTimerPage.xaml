@@ -6,7 +6,7 @@
              xmlns:data="clr-namespace:CollectionViewPerfIssues.Data"
              xmlns:pages="clr-namespace:CollectionViewPerfIssues.Pages"
              x:DataType="pages:ListViewTimerPageModel">
-    <ListView ItemsSource="{Binding EventItems}" RowHeight="40" HasUnevenRows="False" SelectionMode="None">
+    <ListView ItemsSource="{Binding EventItems}" CachingStrategy="RecycleElement"  RowHeight="40" HasUnevenRows="False" SelectionMode="None">
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="data:EventItem">
                 <ViewCell>
