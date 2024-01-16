@@ -23,5 +23,87 @@ Any and all performance suggestions are more than welcome as an issue or as a pu
 # Possible Improvements
 - Some tests use `ObservableCollection` when they don't get any data dynamically added after the constructor is called. So they could just use a list. In my experience this does not solve any of the scrolling performance.
 - As some events are inserting multiple, it could be worth re-implementing `ObservableRangeCollection` from [Xamarin.CommunityToolkit](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/ObjectModel/ObservableRangeCollection.shared.cs) as it allows adding multiple items while only raising the changed event once. This should have no impact on the static tests, timer tests, or dynamic test where you add 1 item.
+
 # Results
+
 TBM (to be measured)
+
+### iOS 
+
+iPhone 15 Pro Max (iOS 17.2.1)
+
+| Test                                    | Result | Notes |
+|-----------------------------------------|--------|-------|
+| CollectionViewStatic50                  | ❓     |       |
+| CollectionViewStatic100                 | ❓     |       |
+| CollectionViewStatic250                 | ❓     |       |
+| ListViewStatic50                        | ❓     |       |
+| ListViewStatic100                       | ❓     |       |
+| ListViewStatic250                       | ❓     |       |
+| CollectionViewDynamic                   | ❓     |       |
+| ListViewDynamic                         | ❓     |       |
+| CollectionViewTimer                     | ❓     |       |
+| ListViewTimer                           | ❓     |       |
+| CollectionViewDynamicKeepItemsInView    | ❓     |       |
+| CollectionViewDynamicKeepScrollOffset   | ❓     |       |
+| CollectionViewDynamicKeepLastItemInView | ❓     |       |
+
+### Android
+
+Pixel 2 XL (Android 13)
+
+| Test                                    | Result | Notes |
+|-----------------------------------------|--------|-------|
+| CollectionViewStatic50                  | ❓     |       |
+| CollectionViewStatic100                 | ❓     |       |
+| CollectionViewStatic250                 | ❓     |       |
+| ListViewStatic50                        | ❓     |       |
+| ListViewStatic100                       | ❓     |       |
+| ListViewStatic250                       | ❓     |       |
+| CollectionViewDynamic                   | ❓     |       |
+| ListViewDynamic                         | ❓     |       |
+| CollectionViewTimer                     | ❓     |       |
+| ListViewTimer                           | ❓     |       |
+| CollectionViewDynamicKeepItemsInView    | ❓     |       |
+| CollectionViewDynamicKeepScrollOffset   | ❓     |       |
+| CollectionViewDynamicKeepLastItemInView | ❓     |       |
+
+### macOS
+
+Late 2018 Mac Mini (macOS 14.2.1, Intel i7 3.2ghz 6C/12T, 32GB RAM, Radeon RX 580)
+
+| Test                                    | Result | Notes |
+|-----------------------------------------|--------|-------|
+| CollectionViewStatic50                  | ❓     |       |
+| CollectionViewStatic100                 | ❓     |       |
+| CollectionViewStatic250                 | ❓     |       |
+| ListViewStatic50                        | ❓     |       |
+| ListViewStatic100                       | ❓     |       |
+| ListViewStatic250                       | ❓     |       |
+| CollectionViewDynamic                   | ❓     |       |
+| ListViewDynamic                         | ❓     |       |
+| CollectionViewTimer                     | ❓     |       |
+| ListViewTimer                           | ❓     |       |
+| CollectionViewDynamicKeepItemsInView    | ❓     |       |
+| CollectionViewDynamicKeepScrollOffset   | ❓     |       |
+| CollectionViewDynamicKeepLastItemInView | ❓     |       |
+
+### Windows  
+
+Desktop (Window 11 23H2, AMD Ryzen 3 3300X, 32 GB RAM, NVIDIA RTX 3060)
+
+| Test                                    | Result | Notes |
+|-----------------------------------------|--------|-------|
+| CollectionViewStatic50                  | ❓     |       |
+| CollectionViewStatic100                 | ❓     |       |
+| CollectionViewStatic250                 | ❓     |       |
+| ListViewStatic50                        | ❓     |       |
+| ListViewStatic100                       | ❓     |       |
+| ListViewStatic250                       | ❓     |       |
+| CollectionViewDynamic                   | ❓     |       |
+| ListViewDynamic                         | ❓     |       |
+| CollectionViewTimer                     | ❓     |       |
+| ListViewTimer                           | ❓     |       |
+| CollectionViewDynamicKeepItemsInView    | ❓     |       |
+| CollectionViewDynamicKeepScrollOffset   | ❓     |       |
+| CollectionViewDynamicKeepLastItemInView | ❓     |       |
