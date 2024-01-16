@@ -22,6 +22,6 @@ Any and all performance suggestions are more than welcome as an issue or as a pu
 
 # Possible Improvements
 - Some tests use `ObservableCollection` when they don't get any data dynamically added after the constructor is called. So they could just use a list. In my experience this does not solve any of the scrolling performance.
-
+- As some events are inserting multiple, it could be worth re-implementing `ObservableRangeCollection` from [Xamarin.CommunityToolkit](https://github.com/xamarin/XamarinCommunityToolkit/blob/main/src/CommunityToolkit/Xamarin.CommunityToolkit/ObjectModel/ObservableRangeCollection.shared.cs) as it allows adding multiple items while only raising the changed event once. This should have no impact on the static tests, timer tests, or dynamic test where you add 1 item.
 # Results
 TBM (to be measured)
