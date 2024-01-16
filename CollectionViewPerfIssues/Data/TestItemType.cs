@@ -13,6 +13,9 @@ public enum TestItemType
     ListViewDynamic,
     CollectionViewTimer,
     ListViewTimer,
+    CollectionViewDynamicKeepItemsInView,
+    CollectionViewDynamicKeepScrollOffset,
+    CollectionViewDynamicKeepLastItemInView,
 }
 
 

@@ -38,6 +38,9 @@ public partial class MainPage : ContentPage
                 TestItemType.ListViewDynamic => new ListViewDynamicPage(),
                 TestItemType.CollectionViewTimer => new CollectionViewTimerPage(),
                 TestItemType.ListViewTimer => new ListViewTimerPage(),
+                TestItemType.CollectionViewDynamicKeepItemsInView => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepItemsInView),
+                TestItemType.CollectionViewDynamicKeepScrollOffset => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepScrollOffset),
+                TestItemType.CollectionViewDynamicKeepLastItemInView => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepLastItemInView),
                 _ => throw new Exception("TestItemType not handled"),
             };
 
