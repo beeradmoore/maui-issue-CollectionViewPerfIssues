@@ -12,7 +12,7 @@ public partial class MainPage : ContentPage
 		BindingContext = new MainPageModel();
     }
 
-    void ListView_ItemTapped(System.Object sender, Microsoft.Maui.Controls.ItemTappedEventArgs e)
+    void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
     {
         if (e.Item == null)
         {
@@ -34,10 +34,15 @@ public partial class MainPage : ContentPage
                 TestItemType.ListViewStatic50 => new ListViewStaticPage(50),
                 TestItemType.ListViewStatic100 => new ListViewStaticPage(100),
                 TestItemType.ListViewStatic250 => new ListViewStaticPage(250),
+                TestItemType.VirtualListViewStatic50 => new VirtualListViewStaticPage(50),
+                TestItemType.VirtualListViewStatic100 => new VirtualListViewStaticPage(100),
+                TestItemType.VirtualListViewStatic250 => new VirtualListViewStaticPage(250),
                 TestItemType.CollectionViewDynamic => new CollectionViewDynamicPage(),
                 TestItemType.ListViewDynamic => new ListViewDynamicPage(),
+                TestItemType.VirtualListViewDynamic => new VirtualListViewDynamicPage(),
                 TestItemType.CollectionViewTimer => new CollectionViewTimerPage(),
                 TestItemType.ListViewTimer => new ListViewTimerPage(),
+                TestItemType.VirtualListViewTimer => new VirtualListViewTimerPage(),
                 TestItemType.CollectionViewDynamicKeepItemsInView => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepItemsInView),
                 TestItemType.CollectionViewDynamicKeepScrollOffset => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepScrollOffset),
                 TestItemType.CollectionViewDynamicKeepLastItemInView => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepLastItemInView),
