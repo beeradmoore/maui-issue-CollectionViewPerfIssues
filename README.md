@@ -40,13 +40,19 @@ iPhone 15 Pro Max (iOS 17.2.1)
 | ListViewStatic50                        | ❓     |       |
 | ListViewStatic100                       | ❓     |       |
 | ListViewStatic250                       | ❓     |       |
+| VirtualListViewStatic50                 | ❓     |       |
+| VirtualListViewStatic100                | ❓     |       |
+| VirtualListViewStatic250                | ❓     |       |
 | CollectionViewDynamic                   | ❓     |       |
 | ListViewDynamic                         | ❓     |       |
+| VirtualListViewDynamic                  | ❓     |       |
 | CollectionViewTimer                     | ❓     |       |
 | ListViewTimer                           | ❓     |       |
+| VirtualListViewTimer                    | ❓     |       |
 | CollectionViewDynamicKeepItemsInView    | ❓     |       |
 | CollectionViewDynamicKeepScrollOffset   | ❓     |       |
 | CollectionViewDynamicKeepLastItemInView | ❓     |       |
+| VirtualListViewDynamicScrollToLastItem  | ❓     |       |
 
 ### Android
 
@@ -60,13 +66,19 @@ Pixel 2 XL (Android 13)
 | ListViewStatic50                        | ❓     |       |
 | ListViewStatic100                       | ❓     |       |
 | ListViewStatic250                       | ❓     |       |
+| VirtualListViewStatic50                 | ❓     |       |
+| VirtualListViewStatic100                | ❓     |       |
+| VirtualListViewStatic250                | ❓     |       |
 | CollectionViewDynamic                   | ❓     |       |
 | ListViewDynamic                         | ❓     |       |
+| VirtualListViewDynamic                  | ❓     |       |
 | CollectionViewTimer                     | ❓     |       |
 | ListViewTimer                           | ❓     |       |
+| VirtualListViewTimer                    | ❓     |       |
 | CollectionViewDynamicKeepItemsInView    | ❓     |       |
 | CollectionViewDynamicKeepScrollOffset   | ❓     |       |
 | CollectionViewDynamicKeepLastItemInView | ❓     |       |
+| VirtualListViewDynamicScrollToLastItem  | ❓     |       |
 
 ### macOS
 
@@ -80,13 +92,19 @@ Late 2018 Mac Mini (macOS 14.2.1, Intel i7 3.2ghz 6C/12T, 32GB RAM, Radeon RX 58
 | ListViewStatic50                        | ❓     |       |
 | ListViewStatic100                       | ❓     |       |
 | ListViewStatic250                       | ❓     |       |
+| VirtualListViewStatic50                 | ❓     |       |
+| VirtualListViewStatic100                | ❓     |       |
+| VirtualListViewStatic250                | ❓     |       |
 | CollectionViewDynamic                   | ❓     |       |
 | ListViewDynamic                         | ❓     |       |
+| VirtualListViewDynamic                  | ❓     |       |
 | CollectionViewTimer                     | ❓     |       |
 | ListViewTimer                           | ❓     |       |
+| VirtualListViewTimer                    | ❓     |       |
 | CollectionViewDynamicKeepItemsInView    | ❓     |       |
 | CollectionViewDynamicKeepScrollOffset   | ❓     |       |
 | CollectionViewDynamicKeepLastItemInView | ❓     |       |
+| VirtualListViewDynamicScrollToLastItem  | ❓     |       |
 
 ### Windows  
 
@@ -100,10 +118,18 @@ Desktop (Window 11 23H2, AMD Ryzen 3 3300X, 32 GB RAM, NVIDIA RTX 3060)
 | ListViewStatic50                        | ❓     |       |
 | ListViewStatic100                       | ❓     |       |
 | ListViewStatic250                       | ❓     |       |
+| VirtualListViewStatic50                 | ❓     |       |
+| VirtualListViewStatic100                | ❓     |       |
+| VirtualListViewStatic250                | ❓     |       |
 | CollectionViewDynamic                   | ❓     |       |
 | ListViewDynamic                         | ❓     |       |
+| VirtualListViewDynamic                  | ❓     |       |
 | CollectionViewTimer                     | ❓     |       |
 | ListViewTimer                           | ❓     |       |
+| VirtualListViewTimer                    | ❓     |       |
 | CollectionViewDynamicKeepItemsInView    | ❓     |       |
 | CollectionViewDynamicKeepScrollOffset   | ❓     |       |
 | CollectionViewDynamicKeepLastItemInView | ❓     |       |
+| VirtualListViewDynamicScrollToLastItem  | ❓     |       |
+
+
