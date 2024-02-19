@@ -21,6 +21,7 @@ public enum TestItemType
     CollectionViewDynamicKeepItemsInView,
     CollectionViewDynamicKeepScrollOffset,
     CollectionViewDynamicKeepLastItemInView,
+    VirtualListViewDynamicScrollToLastItem,
 }
 
 

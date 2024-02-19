@@ -46,6 +46,7 @@ public partial class MainPage : ContentPage
                 TestItemType.CollectionViewDynamicKeepItemsInView => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepItemsInView),
                 TestItemType.CollectionViewDynamicKeepScrollOffset => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepScrollOffset),
                 TestItemType.CollectionViewDynamicKeepLastItemInView => new CollectionViewDynamicUpdatingScrollModePage(ItemsUpdatingScrollMode.KeepLastItemInView),
+                TestItemType.VirtualListViewDynamicScrollToLastItem => new VirtualListViewDynamicScrollToLastItemPage(),
                 _ => throw new Exception("TestItemType not handled"),
             };
 

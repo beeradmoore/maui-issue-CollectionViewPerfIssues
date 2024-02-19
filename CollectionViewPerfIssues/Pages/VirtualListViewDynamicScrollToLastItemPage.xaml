@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionViewPerfIssues.Pages.VirtualListViewDynamicScrollToLastItemPage"
+             xmlns:vlv="clr-namespace:Microsoft.Maui.Controls;assembly=VirtualListView"
+             xmlns:pages="clr-namespace:CollectionViewPerfIssues.Pages"
+             xmlns:data="clr-namespace:CollectionViewPerfIssues.Data"
+             x:DataType="pages:VirtualListViewDynamicScrollToLastItemPageModel">
+	
+	<Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*,*,*">
+		<Button Grid.Row="0" Grid.Column="0" Text="Add 1" Command="{Binding AddEventsCommand}" CommandParameter="1" VerticalOptions="Center" HorizontalOptions="Center" Margin="8" />
+		<Button Grid.Row="0" Grid.Column="1" Text="Add 10" Command="{Binding AddEventsCommand}" CommandParameter="10" VerticalOptions="Center" HorizontalOptions="Center" Margin="8"  />
+		<Button Grid.Row="0" Grid.Column="2" Text="Add 50" Command="{Binding AddEventsCommand}" CommandParameter="50" VerticalOptions="Center" HorizontalOptions="Center" Margin="8"  />
+		<Button Grid.Row="0" Grid.Column="3" Text="Add 100" Command="{Binding AddEventsCommand}" CommandParameter="100" VerticalOptions="Center" HorizontalOptions="Center" Margin="8"  />
+
+		<vlv:VirtualListView x:Name="TheVirtualListView"  Grid.Row="1" Grid.ColumnSpan="4"  Adapter="{Binding EventItemAdapter}" SelectionMode="None">
+			<vlv:VirtualListView.ItemTemplate>
+				<DataTemplate x:DataType="data:EventItem">
+					<vlv:VirtualViewCell>
+						<Grid ColumnDefinitions="100,100,*" HeightRequest="40">
+							<Label Grid.Column="0" Text="{Binding LogLevel}" VerticalTextAlignment="Center" />
+							<Label Grid.Column="1" Text="{Binding EventTimeString}" VerticalTextAlignment="Center" />
+							<Label Grid.Column="2" Text="{Binding Message}" VerticalTextAlignment="Center" />
+						</Grid>
+					</vlv:VirtualViewCell>
+				</DataTemplate>
+			</vlv:VirtualListView.ItemTemplate>
+		</vlv:VirtualListView>
+	</Grid>
+</ContentPage>
